@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.qlnhanvienController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="1000.0" layoutX="257.0" layoutY="175.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../images/background.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="288.0" layoutY="87.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="btnQuaylaiAdmin" mnemonicParsing="false" onAction="#priviousOnAction" text="&lt; Quay lại">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Text fill="#e5ff00" strokeType="OUTSIDE" strokeWidth="0.0" text="Quản lí nhân viên">
+               <font>
+                  <Font name="System Bold Italic" size="48.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="300.0" right="145.0" top="5.0" />
+               </VBox.margin>
+            </Text>
+            <HBox prefHeight="50.0" prefWidth="700.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Họ và tên:">
+                     <HBox.margin>
+                        <Insets left="80.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="txtTennv" prefHeight="26.0" prefWidth="178.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Giới tính:">
+                     <HBox.margin>
+                        <Insets left="100.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <ComboBox fx:id="cbGioitinh" onAction="#sexOnAction" prefWidth="120.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày sinh:">
+                     <HBox.margin>
+                        <Insets left="100.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <DatePicker fx:id="datenv" onAction="#birthOnAction">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="700.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ:">
+                     <HBox.margin>
+                        <Insets left="80.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="txtDiachi" prefHeight="26.0" prefWidth="178.0">
+                     <HBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SĐT:">
+                     <HBox.margin>
+                        <Insets left="100.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="txtsdt" prefHeight="26.0" prefWidth="122.0">
+                     <HBox.margin>
+                        <Insets left="35.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+                     <HBox.margin>
+                        <Insets left="100.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="txtEmail" prefHeight="26.0" prefWidth="178.0">
+                     <HBox.margin>
+                        <Insets left="30.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="700.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mã nhân viên:">
+                     <HBox.margin>
+                        <Insets left="80.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="txtManv" prefHeight="26.0" prefWidth="147.0">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chức vụ:">
+                     <HBox.margin>
+                        <Insets left="100.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="txtChucvu" prefHeight="26.0" prefWidth="123.0">
+                     <HBox.margin>
+                        <Insets left="15.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lương:">
+                     <HBox.margin>
+                        <Insets left="100.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="txtLuong" prefHeight="26.0" prefWidth="176.0">
+                     <HBox.margin>
+                        <Insets left="25.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="700.0">
+               <children>
+                  <Button fx:id="btnAddnv" mnemonicParsing="false" onAction="#addOnAction" prefWidth="100.0" text="Thêm">
+                     <HBox.margin>
+                        <Insets left="150.0" right="20.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnXoanv" mnemonicParsing="false" onAction="#deleteOnAction" prefWidth="100.0" text="Xóa">
+                     <HBox.margin>
+                        <Insets left="100.0" right="30.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnUpdatenv" mnemonicParsing="false" onAction="#updateOnAction" prefWidth="100.0" text="Sửa">
+                     <HBox.margin>
+                        <Insets left="100.0" right="30.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnSavenv" mnemonicParsing="false" onAction="#saveOnAction" prefWidth="100.0" text="Lưu lại">
+                     <HBox.margin>
+                        <Insets left="100.0" right="100.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn id="clTennv" prefWidth="92.79998475313187" text="Mã nhân viên" />
+                <TableColumn id="clGioitinhnv" minWidth="0.0" prefWidth="126.39999389648438" text="Họ và tên" />
+                  <TableColumn id="clDatenv" minWidth="7.20001220703125" prefWidth="74.39997863769531" text="Giới tính" />
+                  <TableColumn id="clDiachinv" prefWidth="78.39996337890625" text="Ngày sinh" />
+                  <TableColumn id="clSdtnv" prefWidth="132.0" text="Địa chỉ" />
+                  <TableColumn id="clEmailnv" minWidth="0.0" prefWidth="126.4000244140625" text="Số điện thoại" />
+                  <TableColumn id="clEmail" prefWidth="137.5999755859375" text="Email" />
+                  <TableColumn id="clChucvu" prefWidth="110.39996337890625" text="Chức vụ" />
+                  <TableColumn id="clLuong" prefWidth="120.0" text="Lương" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
